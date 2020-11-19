@@ -1,0 +1,887 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 15vw;
+  background-color: rgba(0,0,0,50);
+  left: 0;
+  font-family: Avenir;
+  text-align: center;
+  z-index: 2;
+}
+
+.stickynavbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 2.5vw;
+  background-color: rgba(0,0,0,50);
+  font-family: Avenir;
+  text-align: center;
+  z-index: 1;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.1s;
+}
+
+.sidenav a {
+  position: relative;
+  left: 10%;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-family: Avenir;
+  padding: 10px;
+  font-size: 6vw;
+}
+
+.icon {
+  position: absolute;
+  display: none;
+  left: 2%;
+  top: 1.5vw;
+  z-index: 2;
+}
+
+.hamburger {
+  position: absolute;
+  top: 12%;
+  left: -7%;
+  width: 30vw;
+  display: none;
+}
+
+.hamburger .line{
+  width: 10vw;
+  height: 1.1vw;
+  background-color: #ecf0f1;
+  display: block;
+  border-radius: 1vw;
+  margin: 2vw auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+/* ONE */
+
+#hamburger-1.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1){
+  -webkit-transform: translateY(3.5vw)rotate(45deg);
+  -ms-transform: translateY(3.5vw)rotate(45deg);
+  -o-transform: translateY(3.5vw)rotate(45deg);
+  transform: translateY(3.5vw)rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-2.6vw) rotate(-45deg);
+  -ms-transform: translateY(-2.6vw) rotate(-45deg);
+  -o-transform: translateY(-2.6vw) rotate(-45deg);
+  transform: translateY(-2.6vw) rotate(-45deg);
+}
+
+.tabs {
+  position: absolute;
+  bottom: 5%;
+  display: block;
+  width: 95vw;
+  height: 4vh;
+}
+
+.link-group a {
+  margin: 0 auto;
+  padding: 0vw 2vw 2vh 2vw;
+  font-size: 2.6vh;
+  background-color:rgba(255, 255, 255, 0);
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  position: sticky;
+  height: 2vh;
+}
+
+.link-group a:hover {
+  background-color: white;
+  color: black;
+}
+
+.name {
+  position: absolute;
+  top: 11%;
+  width: 100%;
+  height: auto;
+}
+
+.name a {
+  position: relative;
+  height: auto;
+  width: 30%;
+  margin: 0 auto;
+}
+
+#sig {
+  width: 17vw;
+}
+
+body {
+    color: white;
+    background-color: black;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    transition: 0.1s;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+  src: url(../fonts/Avenir-Book-01.ttf);
+  font-family: Avenir;
+}
+
+@font-face {
+  src: url(../fonts/Didot-01.ttf);
+  font-family: Didot;
+}
+
+@font-face {
+  src: url(../fonts/Gravity-Light.ttf), url('Gravity-Light.ttf') format('ttf');
+  font-family: 'Gravity';
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Athelas Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/Athelas-Regular.woff), url('Athelas-Regular.woff') format('woff');
+}
+
+.site {
+  position: relative;
+  display: block;
+  padding-top: 12vw;
+  width: 100%;
+  background-color: #00000;
+  margin: 0;
+}
+
+.splash-container p {
+  font-size: 4vw;
+  position: absolute;
+  top: 5vw;
+  right: 7%;
+  font-family: 'Libre Franklin';
+  color: white;
+  background-color: black;
+}
+
+.cover {
+  width: 100%;
+  opacity: 0.9;
+}
+
+.social {
+  height: 9vw;
+  width: 14.5vw;
+  position: absolute;
+  bottom: 30%;
+  right: 13%;
+  background-color: #111111;
+  padding: 2px;
+}
+
+.social img {
+  position: relative;
+  left: 7%;
+  width: 4vw;
+  display: inline-block;
+}
+
+.about-container {
+  background-color: #1c2635;
+  position: relative;
+}
+
+.section {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: -2vw;
+}
+
+/*#afb6bf medium blue
+#263246 navy blue*/
+.aboutpic {
+  display: block;
+  width: 177.777%;
+  margin: -10% -40%;
+}
+
+.resume {
+  width: 99%;
+  position: relative;
+  display: inline-block;
+  bottom: 2%;
+  left: -1%;
+}
+
+#img {
+  position: relative;
+  display: inline;
+  width: 3vw;
+}
+
+#resume {
+  display: inline;
+  text-decoration: none;
+  color: white;
+  font-family: 'Libre Franklin';
+  position: relative;
+  top:  -1vw;
+  font-size: 1.5vw;
+}
+
+.aboutme {
+  float: left;
+  width: 98%;
+  position: relative;
+  font-size: 2.5vw;
+  font-family: 'Libre Franklin';
+  margin-bottom: 1.2vw;
+}
+
+#downbeats {
+  color: white;
+}
+
+.onehalfabout {
+  float: left;
+  width: 48%;
+  height: 48vw;
+  overflow: hidden;
+}
+
+.sechalfabout {
+  float: right;
+  width: 50%;
+}
+
+.video {
+  display: inline;
+  min-width: 100%;
+  height: 58vw;
+  float: right;
+  background-color: black;
+}
+
+.video iframe {
+  width: 100%;
+  height: 60vw;
+  opacity: 0.7;
+}
+
+.video video {
+  width: 100%;
+  display: none;
+}
+
+.research-container {
+  position: relative;
+  font-family: 'Libre Franklin';
+  text-align: left;
+  width: 100%;
+  background-color: #000000;
+  margin-top: -0.6vw;
+  background-image: url(../img/covers/stars.jpg);
+  background-size: 100%;
+}
+
+.halfresearch{
+  float: left;
+  width: 50%;
+  height: 52vw;
+}
+
+.researchpara {
+  position: absolute;
+  font-size: 2.5vw;
+  top: 3vw;
+  margin: 0;
+  left: 2%;
+  width: 48%;
+}
+
+.researchpara a {
+  color: white;
+}
+
+.researchpara mark {
+  background-color: black;
+  color: white;
+}
+
+.researchpic {
+  float: right;
+  width: 48%;
+  height: 48vw;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+.music-container {
+  margin-top: -.3vw;
+  border: none;
+}
+
+.perform {
+  width: 50%;
+  float: left;
+  text-align: right;
+  display: none;
+}
+
+.perform iframe {
+  width: 90%;
+  height: 26vw;
+}
+
+.rightmusic {
+  float: left;
+  width: 100%;
+}
+
+.rightmusic iframe {
+  width: 100%;
+  height: 900px;
+}
+
+#listen {
+  position: absolute;
+  font-family: 'Avenir';
+  background-color: #eef4f9;
+  color: black;
+  font-size: 4vw;
+  top: 55%;
+  left: 38%;
+  border: 10px solid black;
+  width: 25%;
+  height: 10%;
+  border-radius: 5px;
+  border-width: 2px;
+  display: none;
+}
+ #listen:hover {
+   background-color: white;
+   color: black;
+   border-radius: 5px;
+ }
+
+.youtube-container {
+  position: relative;
+  font-family: 'Libre Franklin';
+  text-align: left;
+  width: 100%;
+  background-color: #000000;
+  margin-top: -0.6vw;
+  padding-top: 4%;
+  padding-bottom: 6%;
+}
+/*#666f7c gray
+#501B1D dark red*/
+
+.recent1 {
+  top: 10%;
+  width: 50%;
+  display: inline-block;
+}
+
+.recent1 iframe {
+  width: 100%;
+  height: 31vw;
+}
+
+.halfyt {
+  position: relative;
+  width: 50%;
+  float: right;
+  height: 30vw;
+  display: inline-block;
+}
+
+.ytpara {
+  position: absolute;
+  font-size: 2.5vw;
+  top: 1vw;
+  margin: 0;
+  left: 5%;
+  width: 90%;
+}
+
+.ytpara a {
+  color: white;
+}
+
+.photowrap {
+  background-color: black;
+}
+
+.photo-container {
+  position: relative;
+  height: 40vw;
+  overflow: hidden;
+  float: left;
+}
+
+.photo-container img {
+  width: 100%;
+  margin: -10% 0 0 0;
+}
+
+.photo-container p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  float: left;
+}
+
+.photo-container a {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  font-size: 13vw;
+  font-family: Avenir;
+}
+
+.title a {
+  font-size: 50px;
+}
+
+.cover {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.container-wrapper {
+  position: relative;
+  display: block;
+}
+
+.sitecontact {
+  padding-top: 14vw;
+  width: 100%;
+  position: relative;
+  padding-bottom: 4%;
+  opacity: 1;
+  background-image: url(../img/covers/stars.jpg);
+  background-size: 100%;
+}
+
+.contactpara {
+  text-align: center;
+  font-size: 2vw;
+  font-family: 'Libre Franklin';
+  padding-top: 3%;
+  background-color: rgb(0,0,0,0);
+}
+
+form {
+    margin: 0 auto;
+    width: 50vw;
+    height: 32vw;
+    padding: 2vw;
+    padding-bottom: 5vw;
+    border: 1px solid white;
+    z-index: 1;
+}
+
+form div + div {
+    padding-top: 3vw;
+  }
+
+label {
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    left: 50%;
+    font-size: 1.5vw;
+    font-family: 'Libre Franklin';
+    margin-top: 6px;
+}
+
+input, textarea {
+  margin-top: 0.4vw;
+  width: 30vw;
+  height: 2vw;
+  font-size: 1vw;
+  position: absolute;
+  left: 37%;
+}
+
+#message {
+  height: 10vw;
+}
+
+.button {
+  float: left;
+  position: relative;
+  width: 100%;
+  top: 38%;
+  text-align: center;
+}
+
+.button button {
+  font-size: 1.5vw;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-family: 'Libre Franklin';
+  color: white;
+}
+
+portrait button:hover {
+  background-color: white;
+  color: black;
+}
+
+textarea {
+  height: 2vw;
+}
+
+.error, .email, .nameerror {
+  position: relative;
+  top: 15%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Libre Franklin';
+}
+
+.thankyou {
+  padding: 10%;
+  background-color: transparent;
+  font-size: 4em;
+  font-family: 'Libre Franklin';
+  text-align: center;
+}
+
+
+#photosite {
+  position: relative;
+  width: 100%;
+  background-color: #00000;
+  display: flex;
+}
+
+.left {
+  margin-top: 15vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15vw;
+}
+
+.top-right {
+  position: relative;
+}
+
+.bottom-right {
+  position: relative;
+  margin-top: -4px;
+}
+
+#portrait-mobile, #contact-mobile {
+  display: none;
+}
+
+#portrait, #portrait-mobile, #contact-mobile, #landscape, #contact {
+  width: 100%;
+  opacity: 0.7;
+}
+
+#portrait:hover, #portrait-mobile:hover, #contact-mobile:hover, #landscape:hover, #contact:hover{
+  opacity: 0.3;
+}
+
+#portraitcap, #landscapecap, #contactcap {
+  color: white;
+  z-index: 1;
+  font-size: 6vw;
+  text-decoration: none;
+  font-family: Avenir;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+#portraitcap {
+  top: 50%;
+  width: 40%;
+}
+
+#landscapecap {
+  top: 9vw;
+}
+
+#contactcap {
+  top: 2vw;
+}
+
+.footer {
+  font-family: 'Libre Franklin';
+  font-size: 1.5vw;
+  text-align: center;
+  flex-shrink: 0;
+  padding-bottom: 3%;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.social1 {
+  width: 100%;
+  height: 4vw;
+}
+
+.social1 img {
+  width: 5%;
+  display: inline;
+}
+
+@media (max-width: 964px) {
+  .tabs {
+    visibility: hidden;
+  }
+  #sig {
+    width: 23vw;
+    margin-top: -1.5vw;
+  }
+  .hamburger {
+    display: block;
+  }
+  .stickynavbar {
+    display: none;
+  }
+  .social {
+    display: none;
+  }
+  .onehalfabout {
+    overflow: visible;
+    height: auto;
+  }
+  .sechalfabout {
+    display: block;
+  }
+  .about-container {
+    padding-bottom: 5%;
+    margin-top: -3vw;
+  }
+  #para {
+    font-size: 5vw;
+  }
+  #img {
+    width: 8vw;
+  }
+  #resume {
+    font-size: 4vw;
+    top:  -2.3vw;
+    left: 1vw;
+  }
+  .resume {
+    left: 1vw;
+  }
+  .aboutpic {
+    width: 100%;
+    margin: 0;
+  }
+  #one {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  #two {
+    width: 100%;
+  }
+  #two iframe {
+    width: 100%;
+    height: 500px;
+  }
+  .aboutme {
+    left: 3%;
+    width: 95%;
+    margin-bottom: 5vw;
+  }
+  .research-container {
+    height: 100vw;
+  }
+  .halfresearch {
+    width: 100%;
+    height: 100vw;
+  }
+  .researchpara {
+    width: 96%;
+    font-size: 5vw;
+  }
+  .music-container {
+    margin-top: -1vw;
+  }
+  .name {
+    top: 20%;
+  }
+  .youtube-container {
+    margin-top: -2.5vw;
+  }
+  .halfyt {
+    width: 100%;
+    display: block;
+    height: 60vw;
+  }
+  .recent1 {
+    width: 100%;
+  }
+  .recent1 iframe {
+    width: 100%;
+    height: 61.5vw;
+  }
+  .ytpara {
+    top: 2vw;
+    font-size: 5vw;
+  }
+  .photo-container {
+    overflow: hidden;
+    height: 60vw;
+  }
+  .photo-container a {
+    font-size: 14vw;
+  }
+  .photo-container img {
+    width: 170%;
+    margin: -10% -65% 0 0;
+  }
+  .photo-container p {
+    padding-top: 5%;
+  }
+  #photosite {
+    flex-wrap: wrap;
+  }
+  .right {
+    margin: -4px;
+  }
+  #listen {
+    display: block;
+  }
+  #portrait-mobile, #contact-mobile {
+    display: block;
+  }
+  #portrait, #contact {
+    display: none;
+  }
+  #portraitcap, #contactcap {
+    font-size: 17vw;
+    width: 100%;
+  }
+  #portraitcap {
+    top: 10%;
+  }
+  #landscapecap {
+    top: 10%;
+    font-size: 17vw;
+  }
+  #contactcap {
+    top: 10%;
+  }
+  label {
+    font-size: 5vw;
+    width: auto;
+  }
+  input, textarea {
+    margin-top: 2.3vw;
+    height: 4vw;
+    left: 50%;
+    width: 40vw;
+    font-size: 3vw;
+  }
+  .sitecontact{
+    background-image: url(../img/covers/stars_flipped.jpg);
+  }
+  .contactpara {
+    font-size: 6vw;
+  }
+  form {
+    width: 90%;
+    height: 87vw;
+  }
+  #message {
+    height: 25vw;
+  }
+  .button button {
+    width: 30vw;
+    height: 13vw;
+    font-size: 5vw;
+  }
+  .button {
+    top: 38%;
+  }
+  .error, .email {
+    top: 10%;
+    font-size: 1.3em;
+  }
+  .nameerror {
+    top: 10%;
+    font-size: 1em;
+  }
+  .footer {
+    font-size: 3.5vw;
+  }
+  .social1 img {
+    width: 10%;
+  }
+  .thankyou {
+    font-size: 10vw;
+  }
+  }
+
+@media (max-width: 500px) {
+  #two iframe {
+    height: 100vw;
+  }
+}
